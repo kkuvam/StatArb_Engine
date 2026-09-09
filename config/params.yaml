@@ -1,0 +1,23 @@
+universe:
+  min_adtv_usd: 10000000.0
+  adtv_window_days: 20
+  max_missing_pct: 0.02
+
+signals:
+  johansen_confidence: "95%"
+  adf_max_pvalue: 0.05
+  kalman_delta: 0.0001
+  kalman_obs_noise: 0.001
+  z_entry: 2.0
+  z_exit: 0.0
+  z_rolling_window: 60
+
+risk:
+  pca_components: 5
+  covariance_shrinkage: "ledoit_wolf"
+
+optimization:
+  target_gamma: 0.5
+  max_gross_leverage: 2.0
+  max_position_weight: 0.10
+  transaction_cost_bps: 5
